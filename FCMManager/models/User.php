@@ -2,6 +2,7 @@
 
     include_once 'Device.php';
     include_once 'Subscribe.php';
+    include_once 'Topic.php';
 
     class User {
 
@@ -60,6 +61,18 @@
             }
         }
 
+        public function subscribeDeviceToAllUserTopics($userId, $deviceId) {
+
+            $subscribe = new Subscribe($this->conn);
+            $topicArr = $subscribe->getSubscribedTopics($userId);
+
+            $topic = new Topic($this->conn);
+
+            foreach ($topicArr as $topicName) {
+                $topic->subscribeTopic($topicName['topicId'], $deviceId);
+            }
+        }
+
         public function newUserLogin($userId, $userName, $userEmail, $deviceId) {
             
             $userPrivilege = $this->getUserPrivilege($userId);
@@ -73,11 +86,13 @@
             //check if given deviceId is registered in database
             $device = new Device($this->conn);
             //if not we register it
+ 
             if ($device->isRegisteredDeviceId($userId, $deviceId) == FALSE) {
                 $device->registerNewDevice($userId, $deviceId);
 
+                $deviceToken = substr($deviceId, 1, -1);
                 //subscribe new registered device to all topics, for those are the user subscribed before
-                subscribeDeviceToAllUserTopics($userId);
+                $this->subscribeDeviceToAllUserTopics($userId, $deviceToken);
             }
 
             return $userPrivilege;
@@ -142,16 +157,6 @@
             $result = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
             return $result;
-        }
-
-        public function subscribeDeviceToAllUserTopics($userId) {
-
-            $subscribe = new Subscribe($this->conn);
-            $topicArr = $subscribe->getSubscribedTopics($userId);
-
-            foreach ($topicArr as &$topic) {
-                $subscribe->subscribeForTopic($userId, $topic);
-            }
         }
 
     }

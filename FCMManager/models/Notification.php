@@ -57,7 +57,7 @@
 
             $query = 'SELECT notificationId, notificationTitle, notificationBody, 
                 DATE_FORMAT(notificationDate, "%Y/%m/%d %H:%i") AS notificationDate, seen FROM ' . 
-                $this->table . ' WHERE userId = :userId ORDER BY notificationDate DESC';
+                $this->table . ' n WHERE userId = :userId ORDER BY n.notificationDate DESC';
             
             $stmt = $this->conn->prepare($query);
             $stmt->bindParam(":userId", $userId);

@@ -46,10 +46,11 @@
 
         public function getSubscribedTopics($userId) {
 
-            $query = 'SELECT topicId FROM ' . $this->table . ' WHERE userId = :userId';
+            //$query = 'SELECT topicId FROM ' . $this->table . ' WHERE userId = :userId';
+            $query = 'SELECT topicId FROM ' . $this->table . ' WHERE userId = "' . $userId . '"';
             
             $stmt = $this->conn->prepare($query);
-            $stmt->bindParam(":userId", $userId);
+            //$stmt->bindParam(":userId", $userId);
             $stmt->execute();
             $result = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
