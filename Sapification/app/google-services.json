@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "333185662546",
+    "firebase_url": "https://fcmmanager-9f357.firebaseio.com",
+    "project_id": "fcmmanager-9f357",
+    "storage_bucket": "fcmmanager-9f357.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333185662546:android:376d04a29cd72e11",
+        "android_client_info": {
+          "package_name": "com.example.elekesattila.sapification_3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333185662546-aakvguv6h997b5j2rmnk5ttdpufcsrai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDocCcCiJozjUfld_OOiyiesacCZFsEONs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333185662546-aakvguv6h997b5j2rmnk5ttdpufcsrai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

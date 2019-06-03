@@ -1,0 +1,50 @@
+<resources>
+    <string name="add_topic">Add topic</string>
+    <string name="add_title_to_topic">Add title to your topic!</string>
+    <string name="add_title_to_notification">Add title to your notification!</string>
+    <string name="add_body_to_notification">Add body to your notification!</string>
+    <string name="admin">Admin</string>
+    <string name="ago"> days ago</string>
+    <string name="app_name">SapiFication</string>
+    <string name="delete_text">Delete text</string>
+    <string name="failure">An error occurred</string>
+    <string name="history">Sapifications</string>
+    <string name="message">Type your message here</string>
+    <string name="modify_privilege">Modify permission</string>
+    <string name="modify_privilege_alert">Are you sure you want to modify this privilege?</string>
+    <string name="new_topic">New topic</string>
+    <string name="new_topic_succes">Topic added</string>
+    <string name="new_topic_exists">Topic already exists</string>
+    <string name="new_notification">New notification</string>
+    <string name="new_notification_succes">Notification sent</string>
+    <string name="no">No</string>
+    <string name="notifications">My notifications</string>
+    <string name="ok">OK</string>
+    <string name="send">Send</string>
+    <string name="select_topic">Select topic</string>
+    <string name="sign_in">Sign in with your Google account!</string>
+    <string name="sign_out">Sign out</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="subscribed">You are subscribed to this topic</string>
+    <string name="subscribe_success">Successfully subscribed to the topic</string>
+    <string name="subscribe_failure">Subscribe failed</string>
+    <string name="super_user">Super User</string>
+    <string name="title">Title</string>
+    <string name="today">Today</string>
+    <string name="topic_list">List of topics</string>
+    <string name="topic_select">Select topic</string>
+    <string name="unsubscribe">Unsubscribe</string>
+    <string name="not_subscribed">You are not subscribed to this topic</string>
+    <string name="sure">Are you sure?</string>
+    <string name="unsubscribe_success">Successfully unsubscribed from the topic</string>
+    <string name="unsubscribe_failure">Unsubscribe failed</string>
+    <string name="user">User</string>
+    <string name="users">Users</string>
+    <string name="view_topics">Topics</string>
+    <string name="view_history">Notification history</string>
+    <string name="welcome">Welcome to Sapification!</string>
+    <string name="yes">Yes</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
